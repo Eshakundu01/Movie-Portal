@@ -1,0 +1,18 @@
+uuid: db0f4fdc-9fe2-4544-9af9-0e9fce568bed
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: News
+type: news
+description: 'News related to movies and celebrities is created.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,8 @@
+uuid: 350fdd14-8ba3-4608-b263-a430766c09fe
+langcode: en
+status: true
+dependencies: {  }
+name: Class
+vid: class
+description: 'The categories of entertainment news.'
+weight: 0

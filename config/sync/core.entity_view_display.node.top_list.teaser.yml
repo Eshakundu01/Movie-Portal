@@ -1,0 +1,24 @@
+uuid: e7d80672-f6e7-4edc-9e8a-cb5476ed4a5e
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.top_list.field_description
+    - field.field.node.top_list.field_list
+    - node.type.top_list
+  module:
+    - user
+id: node.top_list.teaser
+targetEntityType: node
+bundle: top_list
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  field_list: true

@@ -1,0 +1,47 @@
+uuid: bfde7640-526c-45bd-9bcd-f5ee56d24098
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.top_list.field_description
+    - field.field.node.top_list.field_list
+    - node.type.top_list
+  module:
+    - ds
+    - text
+    - user
+id: node.top_list.default
+targetEntityType: node
+bundle: top_list
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_list:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: movie_list
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

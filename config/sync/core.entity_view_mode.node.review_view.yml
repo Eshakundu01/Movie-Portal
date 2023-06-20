@@ -1,0 +1,10 @@
+uuid: afb268f0-a2b2-41fd-965d-b9986a595123
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.review_view
+label: 'Review View'
+targetEntityType: node
+cache: true

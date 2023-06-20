@@ -1,0 +1,19 @@
+uuid: b2111b5b-19cd-41ae-ab82-6148d4f55d3f
+langcode: en
+status: true
+dependencies: {  }
+id: development_split
+label: 'Development Split'
+description: ''
+weight: 0
+stackable: false
+storage: folder
+folder: ../config/Development
+module:
+  devel: 0
+  devel_generate: 0
+theme: {  }
+complete_list:
+  - devel.settings
+  - devel.toolbar.settings
+partial_list: {  }

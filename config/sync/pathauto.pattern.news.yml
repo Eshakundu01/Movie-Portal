@@ -1,0 +1,22 @@
+uuid: ca2648d1-c6d7-477d-a4cb-fcd19db3d39b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: news
+label: News
+type: 'canonical_entities:node'
+pattern: 'news/[node:title]'
+selection_criteria:
+  986831cf-0763-4174-b4f6-b606b6fb5467:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 986831cf-0763-4174-b4f6-b606b6fb5467
+    context_mapping:
+      node: node
+    bundles:
+      news: news
+selection_logic: and
+weight: -5
+relationships: {  }

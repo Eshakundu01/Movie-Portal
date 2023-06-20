@@ -1,0 +1,38 @@
+uuid: cf5ea1da-ce35-46f9-a92f-6944370d6d63
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - core.entity_view_mode.node.teaser
+    - field.field.node.movie.field_genres
+    - field.field.node.movie.field_links
+    - field.field.node.movie.field_plot
+    - field.field.node.movie.field_poster
+    - field.field.node.movie.field_release_date
+    - field.field.node.movie.field_review
+    - node.type.movie
+  module:
+    - comment
+    - user
+id: node.movie.teaser
+targetEntityType: node
+bundle: movie
+mode: teaser
+content:
+  field_review:
+    type: comment_default
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_genres: true
+  field_links: true
+  field_plot: true
+  field_poster: true
+  field_release_date: true
+  links: true

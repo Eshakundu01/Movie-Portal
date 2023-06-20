@@ -1,0 +1,33 @@
+uuid: ad7244c7-570f-46b7-a8e4-b2b89583eee1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3225a831-7fc8-4614-bb7d-9daadd55ab78'
+  module:
+    - block_content
+    - node
+  theme:
+    - bootstrap
+id: recommended
+theme: bootstrap
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:3225a831-7fc8-4614-bb7d-9daadd55ab78'
+settings:
+  id: 'block_content:3225a831-7fc8-4614-bb7d-9daadd55ab78'
+  label: Recommended
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      movie: movie

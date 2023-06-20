@@ -1,0 +1,29 @@
+uuid: 98d40cad-3d63-466b-b442-136cd20752b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_list
+    - node.type.movie
+    - node.type.top_list
+id: node.top_list.field_list
+field_name: field_list
+entity_type: node
+bundle: top_list
+label: List
+description: 'List consists of related movie.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      movie: movie
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

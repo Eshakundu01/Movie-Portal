@@ -1,0 +1,15 @@
+uuid: 744beeb8-9782-409e-9748-cae9057f741d
+langcode: en
+status: true
+dependencies: {  }
+name: news_photo
+label: 'News Photo ( 400 x 400 )'
+effects:
+  51b98e21-81f2-4b68-87ba-7329735e40e7:
+    uuid: 51b98e21-81f2-4b68-87ba-7329735e40e7
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 400
+      height: 400
+      anchor: center-center

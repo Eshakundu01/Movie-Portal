@@ -1,0 +1,15 @@
+uuid: 11eb8c03-111e-4624-8c41-9a4df8fbcb83
+langcode: en
+status: true
+dependencies: {  }
+name: review_photo_
+label: 'Review Photo ( 130 x 100 )'
+effects:
+  7dfc4088-ec30-4c87-9000-e0273696ddb6:
+    uuid: 7dfc4088-ec30-4c87-9000-e0273696ddb6
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 130
+      height: 100
+      anchor: center-center

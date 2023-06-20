@@ -1,0 +1,85 @@
+uuid: 5e6aa4f4-3fc8-4aad-a84f-934bd8c6c2b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.body
+    - field.field.node.page.layout_builder__layout
+    - node.type.page
+    - views.view.latest_reviews
+    - views.view.recent_lists
+  module:
+    - layout_builder
+    - layout_discovery
+    - quicktabs
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Home Page'
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          19bb9f7a-510a-41a5-9e39-3ad4081f0f76:
+            uuid: 19bb9f7a-510a-41a5-9e39-3ad4081f0f76
+            region: first
+            configuration:
+              id: 'quicktabs_block:news'
+              label: 'QuickTabs - News'
+              label_display: '0'
+              provider: quicktabs
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          db2bf3ba-6f0e-4e68-ac98-c453b081558a:
+            uuid: db2bf3ba-6f0e-4e68-ac98-c453b081558a
+            region: first
+            configuration:
+              id: 'views_block:recent_lists-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: -1
+            additional: {  }
+          38adbc92-ab32-41b6-b824-760f8d78ddfd:
+            uuid: 38adbc92-ab32-41b6-b824-760f8d78ddfd
+            region: second
+            configuration:
+              id: 'views_block:latest_reviews-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components: {  }
+        third_party_settings: {  }
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  layout_builder__layout: true

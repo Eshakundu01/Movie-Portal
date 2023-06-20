@@ -1,0 +1,12 @@
+uuid: 19cfd68a-5ead-4378-8c57-2b3e66b1e56e
+langcode: en
+status: true
+dependencies: {  }
+id: contact_us
+label: 'Contact Us'
+recipients:
+  - esha.kundu@innoraft.com
+reply: ''
+weight: 0
+message: 'Successfully submit. Continue exploring our content.'
+redirect: /

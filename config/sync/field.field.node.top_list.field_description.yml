@@ -1,0 +1,21 @@
+uuid: ccf6f648-ac32-475b-b2e8-12a37419ef3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.top_list
+  module:
+    - text
+id: node.top_list.field_description
+field_name: field_description
+entity_type: node
+bundle: top_list
+label: Description
+description: 'Short description for the list.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

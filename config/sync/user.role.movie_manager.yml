@@ -1,0 +1,39 @@
+uuid: 5c949309-220f-4e3b-b320-c1ed51a960aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - node.type.top_list
+    - taxonomy.vocabulary.genre
+  module:
+    - comment
+    - filter
+    - node
+    - system
+    - taxonomy
+    - toolbar
+id: movie_manager
+label: 'Movie Manager'
+weight: 5
+is_admin: null
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'create terms in genre'
+  - 'create top_list content'
+  - 'delete own top_list content'
+  - 'edit any top_list content'
+  - 'edit own comments'
+  - 'edit own top_list content'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'view own unpublished content'
+  - 'view top_list revisions'

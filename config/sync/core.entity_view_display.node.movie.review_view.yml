@@ -1,0 +1,165 @@
+uuid: 9248bd82-f5ef-4563-b2ea-8c2661bc447c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.review_view
+    - field.field.node.movie.field_genres
+    - field.field.node.movie.field_links
+    - field.field.node.movie.field_plot
+    - field.field.node.movie.field_poster
+    - field.field.node.movie.field_release_date
+    - field.field.node.movie.field_review
+    - image.style.review_photo_
+    - node.type.movie
+  module:
+    - ds
+    - image
+    - layout_builder
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  ds:
+    layout:
+      id: ds_2col_stacked
+      settings:
+        disable_css: false
+        entity_classes: all_classes
+        classes:
+          layout_class: {  }
+        wrappers:
+          header: div
+          left: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      header:
+        - node_title
+        - node_post_date
+      left:
+        - field_poster
+      right:
+        - field_plot
+      footer:
+        - field_links
+    fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 1
+        label: inline
+        formatter: ds_post_date_short
+        ft:
+          id: default
+          settings:
+            lb: 'Created on'
+            lb-col: false
+            classes: {  }
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          'link class': ''
+          wrapper: h3
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: node.movie.review_view
+targetEntityType: node
+bundle: movie
+mode: review_view
+content:
+  field_links:
+    type: link
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: _blank
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: true
+            ow-el: div
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: true
+            fis-el: h4
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: span
+            fi-cl: 'border border-dark'
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 4
+    region: footer
+  field_plot:
+    type: text_trimmed
+    label: visually_hidden
+    settings:
+      trim_length: 300
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 3
+    region: right
+  field_poster:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: review_photo_
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 2
+    region: left
+hidden:
+  field_genres: true
+  field_release_date: true
+  field_review: true
+  links: true
